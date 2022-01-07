@@ -1,9 +1,13 @@
 def solution(L, x):
-    answer = []
-    if x not in L:
-        return [-1]
-    for i in L:
-        if i == x:
-            answer.append(L.index(x))            
-            L[L.index(i)] = i - 1
+    answer = -1
+    left = 0
+    right = len(L) - 1
+    while left <= right:
+        mid = (left + right)//2
+        if x == L[mid]:
+            return mid
+        elif x < L[mid]:
+            right = mid - 1
+        else:
+            left = mid + 1     
     return answer
