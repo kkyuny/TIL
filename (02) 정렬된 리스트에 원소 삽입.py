@@ -1,8 +1,8 @@
 def solution(L, x):
-    if x < L[0]:
-        L.insert(0,x)
-    else:
-        for i in L:
-            if x < i:
-                L.insert(L.index(i),x)        
-    return L
+    answer = []
+    for i in range(len(L)):
+        if L[i] == x:
+            answer.append(i)
+    if len(answer) == 0:
+        return [-1]
+    return answer
