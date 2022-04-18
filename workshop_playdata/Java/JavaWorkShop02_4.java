@@ -5,6 +5,7 @@ public class JavaWorkShop02_4 {
 		
 		int fahrenheit = 100;
 		float celcius = (float)5/9 * (fahrenheit-32);
+//		float celcius = 5/9.0f * (fahrenheit-32);
 		System.out.println("Fahrenheit:"+fahrenheit);
 		System.out.println("Celcius:"+celcius);
 		
