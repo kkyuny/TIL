@@ -19,6 +19,6 @@ public class StringTest01 {
 		}
 		System.out.println(count);
 	}
-
-
 }
+
+// 자바에서 String에 순차적으로 접근하기 위해서는 .toCharArray()라는 함수를 사용하여 char[] 형으로 변환 후 접근할 수 있다.
