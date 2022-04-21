@@ -18,8 +18,6 @@ public class StringTest01 {
 			}			
 		}
 		System.out.println(count);
-		
-
 	}
 
 
