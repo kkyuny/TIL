@@ -17,4 +17,43 @@ where absence_yn = 'Y'
 and DEPARTMENT_NO = 001
 and substr(student_ssn,8,1)=2;
 
+--04
+SELECT student_name
+FROM tb_student
+where student_no in ('A513079','A513090','A513091',
+                    'A513110','A513119');
 
+--05
+SELECT department_name, category
+FROM tb_department
+where capacity between 20 and 30;
+
+SELECT department_name, category
+FROM tb_department
+where capacity >= 20 and capacity <= 30;
+
+--06
+SELECT professor_name
+FROM tb_professor
+where department_no is null;
+
+--07
+SELECT student_no
+FROM tb_student
+where department_no is null;
+
+--08 
+SELECT class_no
+FROM tb_class
+where PREATTENDING_CLASS_NO is not null;
+
+--09
+SELECT category
+FROM tb_department
+GROUP BY category;
+
+--10
+SELECT student_no, student_name, student_ssn, STUDENT_ADDRESS
+FROM tb_student
+where substr(student_no, 1, 2) = 'A2'
+and substr(STUDENT_ADDRESS, 1, 2) ='전주';
