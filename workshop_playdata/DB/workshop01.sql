@@ -1,0 +1,7 @@
+-- 01
+SELECT DEPARTMENT_NAME, CATEGORY
+FROM TB_DEPARTMENT;
+
+-- 02
+SELECT '국문학과의 정원은 ' || capacity || '명 입니다.'
+FROM TB_DEPARTMENT;
