@@ -52,8 +52,16 @@ SELECT category
 FROM tb_department
 GROUP BY category;
 
+SELECT distinct category
+FROM tb_department;
+
 --10
 SELECT student_no, student_name, student_ssn, STUDENT_ADDRESS
 FROM tb_student
 where substr(student_no, 1, 2) = 'A2'
 and substr(STUDENT_ADDRESS, 1, 2) ='전주';
+
+SELECT student_no, student_name, student_ssn, STUDENT_ADDRESS
+FROM tb_student
+where ENTRANCE_DATE LIKE '02%'
+and STUDENT_ADDRESS LIKE '전주%';
