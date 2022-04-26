@@ -18,3 +18,14 @@ order by 2;
 --4
 select substr(professor_name, 2) as 이름
 from tb_professor;
+
+--5
+select student_no, student_name
+from tb_student
+where substr(entrance_date,1,2) + 100 - substr(student_ssn, 1, 2) >= 20;
+
+--6
+select student_no, student_name, substr(entrance_date,1,2) + 100 - substr(student_ssn, 1, 2) 나이
+from tb_student
+where substr(entrance_date,1,2) + 100 - substr(student_ssn, 1, 2) >= 20
+and substr(entrance_date,1,2) + 100 - substr(student_ssn, 1, 2) <= 100;
