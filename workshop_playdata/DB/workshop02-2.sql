@@ -41,3 +41,11 @@ when 'N' then '휴학' end 휴학여부
 from tb_student
 where DEPARTMENT_NO = '001'
 and substr(STUDENT_ADDRESS,1,2) = '서울';
+
+select department_no 학과번호, student_name 학생이름, 
+case 
+when absence_yn = 'Y' then '정상'
+when absence_yn = 'N' then '휴학' end 휴학여부
+from tb_student
+where DEPARTMENT_NO = '001'
+and substr(STUDENT_ADDRESS,1,2) = '서울';
