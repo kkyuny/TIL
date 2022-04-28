@@ -22,3 +22,8 @@ order by tp.PROFESSOR_SSN;
 select class_name, department_name
 from tb_class tc, tb_department td
 where tc.department_no = td.DEPARTMENT_NO;
+
+--20
+select class_name, professor_name
+from tb_class tc, tb_professor tp
+where tc.department_no = tp.DEPARTMENT_NO;
