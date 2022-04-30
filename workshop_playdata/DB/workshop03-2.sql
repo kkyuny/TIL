@@ -26,3 +26,9 @@ where ts.DEPARTMENT_NO = '059'
 group by ts.student_no, ts.student_name;
 --전체 평점을 구하는 문제로 group by를 간단하게 이용하여 해결할 수 있었다.
 --하지만 년도별 평점 등의 다른 조건을 이용한 출력은 감이 안잡힌다.
+select round(avg(point),1)
+from TB_STUDENT ts join TB_GRADE tg
+on ts.STUDENT_NO = tg.STUDENT_NO
+where ts.DEPARTMENT_NO = '059'
+group by substr(term_no, 1, 4);
+-- 년도별 평점을 구하는 sql문장이지만, 평점만 나올 뿐 학생의 정보의 출력은 현재로서는 방법이 떠오르지 않는다.
