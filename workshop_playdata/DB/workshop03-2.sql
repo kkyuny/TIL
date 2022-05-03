@@ -41,3 +41,19 @@ ON TS.DEPARTMENT_NO = TD.DEPARTMENT_NO
 JOIN TB_PROFESSOR TP
 ON TS.COACH_PROFESSOR_NO = TP.PROFESSOR_NO
 where TS.STUDENT_NO = 'A313047';
+
+--24
+select student_name, term_no, class_name
+from tb_student
+join tb_grade using (student_no)
+join tb_class USING (department_no)
+where CLASS_NAME = '인간관계론'
+and substr(TERM_NO,1,4) = '2007';
+
+--25 좀 어렵네 이해를 잘 못했음!
+select class_name, department_name
+from tb_class
+join tb_department USING (DEPARTMENT_NO)
+left join tb_class_professor using(class_no)
+where tb_department.category = '예체능'
+and professor_no is null;
