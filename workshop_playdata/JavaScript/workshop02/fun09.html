@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   function xyz(a){
+       var mesg = "";
+       mesg += a.toUpperCase();
+       mesg += " ";
+       mesg += a.toLowerCase();       
+       mesg += " ";
+       for(var i = a.length-1; i>=0; i--){
+         mesg += a[i];
+       }
+       return mesg;
+   }
+
+   var data = xyz('AbCDeF');
+   console.log("데이터", data );
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
