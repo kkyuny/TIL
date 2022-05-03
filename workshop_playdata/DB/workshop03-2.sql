@@ -32,3 +32,12 @@ on ts.STUDENT_NO = tg.STUDENT_NO
 where ts.DEPARTMENT_NO = '059'
 group by substr(term_no, 1, 4);
 -- 년도별 평점을 구하는 sql문장이지만, 평점만 나올 뿐 학생의 정보의 출력은 현재로서는 방법이 떠오르지 않는다.
+
+--23
+SELECT td.department_name 학과이름, ts.student_name 학생이름, tp.professor_name 지도교수이름
+FROM TB_STUDENT TS 
+JOIN TB_DEPARTMENT TD
+ON TS.DEPARTMENT_NO = TD.DEPARTMENT_NO
+JOIN TB_PROFESSOR TP
+ON TS.COACH_PROFESSOR_NO = TP.PROFESSOR_NO
+where TS.STUDENT_NO = 'A313047';
