@@ -57,3 +57,12 @@ join tb_department USING (DEPARTMENT_NO)
 left join tb_class_professor using(class_no)
 where tb_department.category = '예체능'
 and professor_no is null;
+
+--26
+select student_name, 
+NVL(professor_name, '지도교수 미지정')
+from tb_student ts
+join TB_DEPARTMENT td using(department_no)
+left join TB_PROFESSOR tp 
+on ts.COACH_PROFESSOR_NO = tp.PROFESSOR_NO
+where td.DEPARTMENT_NAME = '서반아어학과';
