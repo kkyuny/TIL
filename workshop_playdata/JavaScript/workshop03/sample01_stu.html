@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+ </head>
+ <body>
+ 갯수<input type="text" name="quantity"  id="quantity" value="1">
+ <button id="up">+</button><button id="down">-</button>
+ <script defer type="text/javascript">
+
+    const addButton = document.getElementById("up");
+    const subButton = document.getElementById("down");
+   
+    function addClick() {
+        var count = document.getElementById("quantity").value;	  
+        document.getElementById("quantity").value = parseInt(count)+1;        
+    }
+    function subClick() {
+        var count = document.getElementById("quantity").value;	  
+        document.getElementById("quantity").value = parseInt(count) - 1;
+    }
+    
+    addButton.addEventListener("click", addClick);
+    subButton.addEventListener("click", subClick);
+ 
+ </script>
+ </body>
+ </html>
+
+//addEventListener 방식으로 처리하였다. 그런데 왜 defer가 작동안하는지는 잘 모르겠다.
