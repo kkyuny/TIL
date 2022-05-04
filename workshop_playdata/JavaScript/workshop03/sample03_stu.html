@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+글자수 세기<br>
+<textarea id = "cause" rows="10" cols="10"></textarea><br>
+입력문자수:<span id="result"></span>
+<script type="text/javascript">
+  var count = document.querySelector("#cause");
+
+  function input(){
+    var num = count.value.length;
+    console.log(num);
+    document.querySelector("#result").innerText = num;
+  }
+  count.addEventListener("keyup",input);
+
+</script>
+</body>
+</html>
+
+// 글자수 세기 문제이며, 이문제를 통하여 배운점은
+// 어떠한 태그안에 있는 값을 가져올 때는 value를 이용하고
+// 어떠한 태그안에 값을 입력하고자 할 때는 innerText 혹은 innerHtml을 이용해야한다는 점이다.
+// 또한 addEventListener의 다양한 이벤트 처리방법도 알아야겠다.
