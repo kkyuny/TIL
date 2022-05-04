@@ -66,3 +66,12 @@ join TB_DEPARTMENT td using(department_no)
 left join TB_PROFESSOR tp 
 on ts.COACH_PROFESSOR_NO = tp.PROFESSOR_NO
 where td.DEPARTMENT_NAME = '서반아어학과';
+
+--27
+select class_no, class_name, round(avg(point),2)
+from tb_grade
+join tb_class using(class_no)
+join TB_DEPARTMENT using(department_no)
+where department_name = '환경조경학과'
+AND CLASS_TYPE LIKE '%전공%'
+group by class_no, class_name;
