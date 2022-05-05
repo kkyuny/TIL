@@ -75,3 +75,16 @@ join TB_DEPARTMENT using(department_no)
 where department_name = '환경조경학과'
 AND CLASS_TYPE LIKE '%전공%'
 group by class_no, class_name;
+
+--28
+select category, department_name, round(avg(point),2)
+from TB_STUDENT 
+join TB_DEPARTMENT using (department_no)
+join TB_GRADE using (student_no)
+where category = 
+(select category 
+from tb_department
+where department_name = '환경조경학과')
+group by category, department_name
+order by 1;
+--서브 쿼리를 이용한 문제였는데 이걸 한 번의 시도만에 풀었다. 실력이 좀 올랐나?
