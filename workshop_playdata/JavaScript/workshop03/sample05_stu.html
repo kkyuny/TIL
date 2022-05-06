@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+이미지 이름 알아보기<br>
+<img id="fB" src="a.jpg" width="100" height="100">
+<img id="sB" src="b.jpg" width="100" height="100">
+<img id="tB" src="c.jpg" width="100" height="100"><br>
+파일명:<span id="result"></span>
+<script type="text/javascript">
+  var fB = document.getElementById("fB");
+  var sB = document.getElementById("sB");
+  var tB = document.getElementById("tB");
+   
+  function onMouseImage1(){
+    var mesg = fB.getAttribute("src");
+    document.getElementById("result").innerHTML = mesg;
+  }
+  function onMouseImage2(){
+    var mesg = sB.getAttribute("src");
+    document.getElementById("result").innerHTML = mesg;
+  }
+  function onMouseImage3(){
+    var mesg = tB.src
+    document.getElementById("result").innerHTML = mesg;
+  }
+  fB.addEventListener("mouseover",onMouseImage1);
+  sB.addEventListener("mouseover",onMouseImage2);
+  tB.addEventListener("mouseover",onMouseImage3);
+  
+
+</script>
+</body>
+</html>
+
+//코드에 중복되는 요소가 많아 줄일 필요가 있지만 당장 방법을 모르겠다.
+//이벤트리스너에서 함수를 전달할 때 매개변수 입력을 통해서 해결할 수 있을 것 같은데
+//일단은 잘 안됐다.
+//이전 문제와 마찬가지로 function 사용을 조금 더 알아야할 필요가 있다.
