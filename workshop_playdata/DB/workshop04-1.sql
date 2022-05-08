@@ -33,11 +33,6 @@ and class_no =
 from tb_class
 where class_name = '피부생리학');
 
-
-select *
-from tb_student;
-
 rollback;
 
 // 서브쿼리 안에 조인까지 실행하는 복잡한 문장이다.
-// 만약에 가능성은 낮겠지만 200501 학기에 의학과에 김명훈이란 동명이인이 피부생리학을 수강했다면 해당 문장은 에러가 발생한다.
