@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+<button id="fButton">5</button>
+<button id="sButton">10</button>
+<button id="tButton">15</button><br>
+총합:<span id="result"></span>
+<script type="text/javascript">
+     var fButton = document.getElementById("fButton");
+     var sButton = document.getElementById("sButton");
+     var tButton = document.getElementById("tButton");
+
+     function sum(a){
+          var sum = 0;
+          for(var i = 1; i<=a; i++){
+               sum += i;
+               console.log(sum);
+          }
+          document.getElementById("result").innerHTML = sum;
+     }
+
+     fButton.addEventListener("click", sum(fButton.innerHTML));
+     sButton.addEventListener("click", sum(sButton.innerHTML));
+     tButton.addEventListener("click", sum(tButton.innerHTML));
+</script>
+</body>
+</html>
+
+//click이 일어나지도 않았는데 click이 자동으로 실행된다. 무슨 문제일까 button에 문제가 있는 듯 싶다.
