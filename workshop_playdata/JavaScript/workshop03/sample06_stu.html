@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+이미지선택하기<br>
+<select id = "selectOption">
+ <option value="a">a.jpg</option>
+ <option value="b">b.jpg</option>
+ <option value="c">c.jpg</option>
+</select>
+<img src="a.jpg" width="100" height="100" id="my">
+<script type="text/javascript">
+  var selectImage = document.getElementById("selectOption");
+  
+  console.log(selectImage);
+  function changeImage(){
+    
+    if (selectImage.options[selectImage.selectedIndex].value=='a'){
+      document.getElementById("my").src = "a.jpg";
+    }
+    else if (selectImage.options[selectImage.selectedIndex].value=='b'){
+      
+      document.getElementById("my").src = "b.jpg";
+      console.log(document.getElementById("my").src);
+    } 
+    else if (selectImage.options[selectImage.selectedIndex].value=='c'){
+      document.getElementById("my").src = "c.jpg";
+    }
+  }
+  selectImage.addEventListener("change",changeImage);
+
+</script>
+</body>
+</html>
+
+//option에 관련된 addEventListener를 사용한 문제이다.
+//change라는 이벤트 처리로 옵션의 값 변경을 인지 한 후
+//selectImage.options[selectImage.selectedIndex].value=='a'를 통하여 변경된 옵션값을 확인하여 처리하였다.
+//구글링을 통하여 문제를 풀었는데 addEventListener의 옵션의 경우 이렇게 문제를 푸는 것 같다.
+//니꼴라스가 자바스크립트의 이벤트 처리는 addEventListener가 좋다고하였는데 지난 번 문제부터 계속해서 그냥 태그자체에서 on을 통한 이벤트 감지보다 복잡한 점이 한두가지가 아니다.
