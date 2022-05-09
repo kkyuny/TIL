@@ -36,3 +36,13 @@ where class_name = '피부생리학');
 rollback;
 
 // 서브쿼리 안에 조인까지 실행하는 복잡한 문장이다.
+
+--38
+delete from tb_grade
+where student_no IN
+(select student_no
+from tb_student
+where absence_yn = 'Y');
+
+rollback;
+//서브쿼리를 IN으로 받아주어야 한다.
