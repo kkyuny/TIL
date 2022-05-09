@@ -6,3 +6,11 @@ CREATE TABLE TB_CATEGORY2
 );
 
 DROP TABLE TB_CATEGORY2;
+
+--31
+create table tb_class_type2
+(
+  no varchar2(5) primary key,
+  name varchar2(10)
+);
+DROP TABLE tb_class_type2;
