@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+<form id="loginForm" action="">
+ 아이디<input type="text" name="userid" id="userid">
+ <span id="idSpan"></span><br>
+ 비밀번호<input type="text" name="passwd" id="passwd">
+ <span id="pwSpan"></span><br>
+  <button id="button">로그인</button>
+ </form>
+ <script type="text/javascript">
+
+var loginId = document.querySelector("#userid");
+    var loginPw = document.querySelector("#passwd");
+    var loginButton = document.querySelector("button");
+
+    function varlidaionLogin(event){
+      if(loginId.value.length == 0){         
+         document.querySelector("#idSpan").innerHTML = "아이디 값을 입력하세요";
+         event.preventDefault();
+      }
+      if(loginPw.value.length == 0){
+         document.querySelector("#pwSpan").innerHTML = "비밀번호 값을 입력하세요";
+         event.preventDefault();
+      }
+      if(loginPw.value.length != 0 && loginId.value.length != 0){
+         document.querySelector("#loginForm").action ="success.html";
+      }
+    }
+
+    loginButton.addEventListener("click", varlidaionLogin);
+
+</script>
+</body>
+</html>
+
+//마찬가지로 addEventListener를 이용하여 문제를 풀었다.
+//이 문제의 어려운점은 submit이 진행되면 기본적으로 페이지가 새로고침이 되는데 
+//문제에서는 새로고침을 요구하지 않는다.
+//그렇기 때문에 event.preventDefault()를 이용하여 문제를 해결하였다.
+//그렇지 않은 경우에는 return false를 활용하여 진행를 멈추는 것 같은데, 자세한 원리는 모르겠다.
