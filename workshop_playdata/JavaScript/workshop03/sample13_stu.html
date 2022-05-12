@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+<form id="loginForm" action="">
+ 아이디<input type="text" name="userid" id="userid"><br>
+ 비밀번호<input type="text" name="passwd" id="passwd"><br>
+  <button>로그인</button> 
+ </form>
+ <script type="text/javascript">
+    var loginId = document.querySelector("#userid");
+    var loginPw = document.querySelector("#passwd");
+    var loginButton = document.querySelector("button");
+
+    function varlidaionLogin(){
+      if(loginId.value.length == 0){
+         alert("아이디 값을 입력하세요");
+      }
+      if(loginPw.value.length == 0){
+         alert("비밀번호 값을 입력하세요");
+      }
+      if(loginPw.value.length != 0 && loginId.value.length != 0){
+         document.querySelector("#loginForm").action ="success.html";
+      }
+    }
+
+    loginButton.addEventListener("click", varlidaionLogin);
+   
+   
+</script>
+</body>
+</html>
+
+//addEventListener를 이용하여 문제를 풀었는데, 풀이가 깔끔한지는 잘 모르겠다.
