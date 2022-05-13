@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+ <button id="childOpen">새창 열기</button>
+ <button id="childClose">새창 닫기</button>
+ <button id="parentClose">현재창(부모장) 닫기</button>
+
+ <script type="text/javascript">
+
+  var childOpen = document.querySelector("#childOpen");
+  var childClose = document.querySelector("#childClose");
+  var parentClose = document.querySelector("#parentClose");
+
+  var childWin;
+  function childOpener(){ 
+    childWin = window.open("childWin_stu.html");
+  }
+
+  function childCloser(){
+    childWin.close();
+  }
+
+  function parentCloser(){
+    window.close();
+  }
+
+  childOpen.addEventListener("click", childOpener);
+  childClose.addEventListener("click", childCloser);
+  parentClose.addEventListener("click", parentCloser);
+
+</script>
+</body>
+</html>
