@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+ 값:<input type="search" id="v1">
+ <button id="save">저장</button><br>
+ 
+ <div id="result">
+ 
+ </div>
+ <script type="text/javascript">
+
+   var inputVar = document.querySelector("#v1");
+   var inputBtn = document.querySelector("#save");
+
+   var mesg = ""
+   function saveVar(){     
+     mesg += inputVar.value;
+     mesg += "<br>";
+     document.querySelector("#result").innerHTML = mesg;
+   }
+
+   inputBtn.addEventListener("click", saveVar);
+</script>
+</body>
+</html>
