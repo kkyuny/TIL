@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+<h3>자바스크립트로 특정 URL 접속하기</h3>
+<button id="aButton">구글사이트로 가기</button><br>
+사이트주소입력:<input type="text" name="site" id="site"><button id="bButton">바로가기</button>
+
+<script type="text/javascript">
+
+   var aButton = document.getElementById("aButton");
+   var bButton = document.getElementById("bButton");
+   var site = document.getElementById("site");
+
+   function sepURL(){
+      location.href = "http://www.google.com"
+   }
+   
+   function inputURL(){
+      location.href = site.value;
+   }
+
+   aButton.addEventListener("click",sepURL);
+   bButton.addEventListener("click",inputURL);
+     
+</script>
+</body>
+</html>
+
+//자바스크립트를 이용하여 a 태그를 이용하는 문제로
+//자바스크립트에서 location.href = "페이지명";을 입력하면 해결할 수 있다.
