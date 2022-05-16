@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+<h3>문자열 처리</h3>
+값:<input type="text" name="v1" id="v1" value="10/20/30">
+<button id="submitButton">합계</button><br>
+합계:<span id="result"></span>
+<script type="text/javascript">
+
+     var submitButton = document.querySelector("#submitButton");
+     function sumValue(){
+          var value = document.querySelector("#v1").value.split("/");
+          var sum = 0;
+          for(var i = 0; i < value.length; i++){
+               sum += parseInt(value[i]);
+          }
+          document.querySelector("#result").innerHTML = sum;
+     }
+
+     submitButton.addEventListener("click", sumValue);
+
+  
+</script>
+</body>
+</html>
