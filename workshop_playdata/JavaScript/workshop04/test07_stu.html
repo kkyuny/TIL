@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+<h3>문자열 관리</h3>
+값:<input type="text" name="v1" id="v1" value="How are you? fine thank you">
+<button id="btn">데이터 분석</button><br>
+<div id="result"></div>
+<script type="text/javascript">
+
+  var btn = document.querySelector("#btn");
+  function research(){
+    var text = document.querySelector("#v1").value;
+    console.log(text.split(" ").length);    
+    console.log(text.split(" ").join("").length);
+  }
+  btn.addEventListener("click",research);
+
+</script>
+</body>
+</html>
