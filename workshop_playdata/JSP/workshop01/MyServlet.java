@@ -10,8 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/info")
-public class MyServlet extends HttpServlet {
-	
+public class MyServlet extends HttpServlet {	
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
@@ -30,11 +29,9 @@ public class MyServlet extends HttpServlet {
 		out.print("</tr>");
 		out.print("</table>");
 				
+	}	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
 	}
-
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	}
-
 }
+
+// 어노테이션 방식을 통한 url 접근
