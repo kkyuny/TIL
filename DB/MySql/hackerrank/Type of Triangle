@@ -1,0 +1,12 @@
+select case 
+    when A = B and B = C and A = C then 'Equilateral' 
+    when (A + B <= C or A + C <= B or B + C < A) then 'Not A Triangle'    
+    when ((A = B and A != C) 
+        or (B = C and C != A)
+        or (A = C and B != A)) then 'Isosceles'
+    else 'Scalene'
+    end
+from TRIANGLES 
+
+-- 삼각형의 조건을 구하는 문제로 case when문을 이용하여 조건을 구분하여 풀이하면 된다.
+-- test case가 적어 문제를 통과하긴 했지만 case가 많다면 에러가 발생할 수 있는 코드이다.
