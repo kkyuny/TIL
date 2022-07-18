@@ -1,0 +1,8 @@
+with ordering as (
+    select lat_n, row_number() over(order by lat_n asc) as row_num
+    from station
+)
+select round(avg(lat_n), 4)
+from ordering
+where row_num = (select floor((max(row_num) + min(row_num))/2) from ordering)
+    or row_num = (select ceil((max(row_num) + min(row_num))/2) from ordering)
