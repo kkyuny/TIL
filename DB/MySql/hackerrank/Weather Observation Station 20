@@ -6,3 +6,7 @@ select round(avg(lat_n), 4)
 from ordering
 where row_num = (select floor((max(row_num) + min(row_num))/2) from ordering)
     or row_num = (select ceil((max(row_num) + min(row_num))/2) from ordering)
+
+-- median 값을 구하는 문제로써 median이란 평균값이 아닌 정중앙에 위치한 값을 median이라 한다.
+-- 따라서, median을 구하기 위하여 row_number() 함수를 이용하여 순서를 구하여 정중앙의 값을 구하여 문제를 해결하면 된다.
+-- 문제를 풀이함에 있어서 방법에 의문점이 든 문제였다.
