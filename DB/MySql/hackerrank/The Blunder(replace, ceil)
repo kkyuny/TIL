@@ -1,0 +1,4 @@
+-- replace와 ceil를 이용하여 기존 컬럼의 값을 변경하여 문제를 해결하면 된다.
+-- ceil의 결과값과 round(값,0)의 결과에 차이가 있는지 round를 이용하여 해결하면 코드제출에 실패한다.
+select ceil(avg(salary) - avg(replace(salary, "0", "")))
+from EMPLOYEES 
