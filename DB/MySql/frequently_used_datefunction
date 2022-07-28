@@ -7,3 +7,20 @@ SELECT DATE_SUB("2017-06-15", INTERVAL 7 DAY);
 SELECT DATEDIFF("2017-06-25", "2017-06-15");
 SELECT TIMEDIFF("2021-01-25 12:10:00", "2021-01-25 10:10:00"); -- 시간의 차이 출력
 SELECT DATE_FORMAT(NOW(), "%Y-%m-%d %p"); -- 날짜 형식 지정
+- %j: n번째 일(100,365)
+- %H: Hour시(00, 01, 24) 24시간 형태
+- %h: Hour시(01, 02, 12) 12시간 형태
+- %T: hh:mm:ss
+- %S, %s: Second 초
+- %p: AM, PM
+- %w: Day Of Week(0,1,2) 0부터 일요일
+- %W: Day Of Week(SunDay, Monday, ...)
+- %a: Day of Week(Sun, Mon, Tue, ...)
+- %U: Week 주(시작: 일요일)
+- %u: Week 주(시작: 월요일)
+- %M: Month 월(Janeary, February, ...)
+- %m: Month 월(01,02,03, ...)
+- %D: Month 월(1st, 2dn, 3rd, ...)
+- %Y: Year 연도(1990, 2010, 2021)
+- %y: Year 연도(90, 10, 21)
+- %d: Day 일(00, 01, 02, ...)
